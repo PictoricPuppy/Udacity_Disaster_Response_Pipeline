@@ -18,62 +18,69 @@ The project is divided in three exercises:
 
 **2. FILES**
 
-Project structure
+**Project structure**
 
 The project includes an structure of 5 folders.
 
 ![image](https://github.com/PictoricPuppy/Udacity_Disaster_Response_Pipeline/assets/116310268/8d5898b5-40d1-4573-b6cb-ddef84476389)
 
-app  
+**app** 
 
-  Templates > Templates for the flask app
+  Templates (go.html and master.html) > Templates for the flask app
+  
   run.py > Main file to run the app. 
 
-data
+**data**
 
   DisasterResponse.db > Data base with the results of the ETL.
+  
   disaster_categories.csv > Raw data with categories for the messages.
+  
   disaster_messages.csv > Raw data with the recieved messages.
+  
   process_data.py > File to run the ETL. This file loads and cleans the data of 'disaster_messages.csv' and 'disaster_categories.csv'. After processing, it is saved in 'DisasterResponse.db'.
 
-models
+**models**
 
   classifier.pkl > Classifier machine learning model.
+  
   train_classifier.py > Using the cleaned saved in 'DisasterResponse.db' this scrip trains the data set and saves a machine learning model in 'classifier.pkl'.
 
-root
+**root**
 
   README.md > Instructions to complete the flask app and to run the program.
 
-Jupyter notebook files
+**Jupyter notebook files**
 
   ETL Pipeline Preparation.ipynb > Notebook with the necessary steps to create and prepare the ETL.
+  
   ML Pipeline Preparation.ipynb > Notebook with the necessary steps to create and prepare the ML model.
        
 **3. EXECUTING THE PROGRAM**
 
    Run the following commands to execute the files and the Flask web app.
    
-   Create a database.
+   **Create a database.**
    
       python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db
       
        ![image](https://github.com/PictoricPuppy/Udacity_Disaster_Response_Pipeline/assets/116310268/27e40f80-f5a7-44af-9c74-8e2e1b1f04fa)
 
-   Create a classifier ML.
+   **Create a classifier ML.**
    
       python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl
       
       ![image](https://github.com/PictoricPuppy/Udacity_Disaster_Response_Pipeline/assets/116310268/5d82a4f6-e82f-4df5-a965-2dfe0df7ff76)
+      
       ![image](https://github.com/PictoricPuppy/Udacity_Disaster_Response_Pipeline/assets/116310268/d57fcf34-000c-4dd8-92fc-34213eb794db)
 
-   Run the main app.
+   **Run the main app.**
    
        python run.py
        
        ![image](https://github.com/PictoricPuppy/Udacity_Disaster_Response_Pipeline/assets/116310268/cc919d67-3d83-4a97-8d68-1862dfc45bf3)
    
-   Preview the web app.
+   **Preview the web app.**
    
        http://0.0.0.0:3000
        
