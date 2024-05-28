@@ -16,6 +16,9 @@ The project is divided in three exercises:
       Build a machine learning pipeline to classify the data.
       Run a flask app to visualize the data in a friendly way.
 
+The aim of this project is to help manage messages effectively when a natural disaster comes. 
+Building a machine learning model to help classify messages, will also help to solve this problems in time. Recognizing which ones are most important and redirecting them to the ones who can solve it.
+
 **2. FILES**
 
 **Project structure**
